@@ -1,10 +1,12 @@
 def BMI_CAL(name,H_f,W_kg):
     bmi=round(W_kg/(H_f*0.3048)**2)
-    print(name+" your  BMI is: ",bmi)
-    if bmi < 25:
+    print(name.capitalize()+" your  BMI is",bmi,end=" and ")
+    if bmi < 19:
         return("you are thin")
+    elif 19<=bmi<=25:
+        return("you are healthy")
     else:
-        return("your are overweight")
+        return("you are overweight")
 
 x=str(input("Enter your name: "))
 y=float(input("your height in feet: "))
